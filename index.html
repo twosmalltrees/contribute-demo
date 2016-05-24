@@ -5,7 +5,7 @@
   <title>Contribute Demo</title>
 </head>
 <body>
-  <div id="container">
+  <div class="container">
     <h1>Contribute Demo</h1>
     <h2>Instructions</h2>
     <p>
@@ -22,6 +22,16 @@
       I'd recommend hard refreshing the page after 20 seconds or so, and if you still can't see anything, clear your cache and try again.
       If after that you STILL can't see anything, please let me know!
     </p>
+
+    <script id="contribute-embed">
+      (function(){
+        var script = document.createElement('script');
+        script.src = 'https://contribute-app.herokuapp.com/embed.js'
+        script.async = true;
+        var entry = document.getElementsByTagName('script')[0];
+        entry.parentNode.insertBefore(script, entry);
+      })();
+    </script>
 
   </div>
 </body>
